@@ -17,6 +17,13 @@ const githubReducer = (state,action) => {
                 users: [],
                 isLoading: false
             }
+        case 'GET_USER_AND_GET_REPOS':
+            return{
+                ...state,
+                user: action.payload.user,
+                repos: action.payload.repos,
+                isLoading:false
+            }
         default:
             return state
     }
